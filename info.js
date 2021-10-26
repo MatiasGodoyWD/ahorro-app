@@ -14,6 +14,7 @@ function infoPage(contenedor) {
         </p>
         <button class="btn info__btn">Quiero empezar a ahorrar</button>
       </div>
+      
       <img
         src="./img/chanchaorro.jpg"
         alt="Chancho con monedas"
