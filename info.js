@@ -1,7 +1,7 @@
 import { calculatorPage } from "./calculator.js";
 
 function infoPage(contenedor) {
-  contenedor.innerHTML = `        <h1 class="title">Ahorra para que la plata te "sobre"</h1>
+  contenedor.innerHTML = ` <h1 class="title">Ahorra para que la plata te "sobre"</h1>
     <div class="info__container">
       <div class="info__sobres__container">
         <h2 class="info__sobres__title">Técnica de los sobres</h2>
@@ -25,7 +25,7 @@ function infoPage(contenedor) {
 
 function showCalculator(container) {
   const button = document.querySelector(".info__btn");
-  button.addEventListener("click", (e) => {
+  button.addEventListener("click", () => {
     calculatorPage(container);
   });
 }

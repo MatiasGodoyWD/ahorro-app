@@ -11,6 +11,7 @@ function calculatorPage(contenedor) {
         <p>
           <input class='radio-input' type="radio" id="one-month" name="days" value="1" checked/>
           <label class='calculator__label' for="one-month">1 Mes</label>
+          
         </p>
 
         <p>
@@ -24,15 +25,15 @@ function calculatorPage(contenedor) {
         <p>
           <input class='radio-input' type="radio" id="other" name="days" />
           <label class='calculator__label' for="other">
-            Otro : <input type="text" name="days" id="other-text" class="calculator__input" placeholder="meses..." />
-          </label>
+            Otro : </label> <input type="text" name="days" id="other-text" class="calculator__input" placeholder="meses..." />
+          
         </p>
         <h3 class="calculator__secondary-title">
           ¿Queres multiplicar la cantidad a ahorrar?
         </h3>
 
-        <label class='calculator__label' for = 'multiply'>Días a multiplicar: <input type="text" name="multiply" id="multiply" class="calculator__input"></label for = 'multiply'>
-        <label class='calculator__label' for = 'multiplier'>Multiplicar por: <input type="text" name="multiplier" id="multiplier" class="calculator__input"></label for = 'multiply'>
+        <p><label class='calculator__label' for = 'multiply'>Días a multiplicar: </label > <input type="text" name="multiply" id="multiply" class="calculator__input"></p>
+        <p><label class='calculator__label' for = 'multiplier'>Multiplicar por:</label > <input type="text" name="multiplier" id="multiplier" class="calculator__input"></p>
       <button class="btn calculator__btn" type= 'submit' >Calcula tu ahorro</button>
         </form>
       <img
