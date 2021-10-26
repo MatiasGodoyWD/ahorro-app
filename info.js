@@ -1,3 +1,5 @@
+import { calculatorPage } from "./calculator.js";
+
 function infoPage(contenedor) {
   contenedor.innerHTML = `        <h1 class="title">Ahorra para que la plata te "sobre"</h1>
     <div class="info__container">
@@ -18,13 +20,14 @@ function infoPage(contenedor) {
         class="info__img"
       />
     </div>`;
+  showCalculator(contenedor);
 }
 
-function clearContainer(container) {
+function showCalculator(container) {
   const button = document.querySelector(".info__btn");
-  button.addEventListener("click", () => {
-    container.innerHTML = "";
+  button.addEventListener("click", (e) => {
+    calculatorPage(container);
   });
 }
 
-export { infoPage, clearContainer };
+export { infoPage };
