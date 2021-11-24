@@ -1,10 +1,10 @@
 import { showResults } from "./result.js";
 
 function calculatorPage(contenedor) {
-  contenedor.innerHTML = ` 
+  contenedor.innerHTML = `  <h1 class="title">Calcula tu ahorro</h1>
     <div class="calculator__container">
       <form class="calculator__form">
-        <h2 class="calculator__title">Calcula tu ahorro</h2>
+        
         <h3 class="calculator__secondary-title">
           ¿Por cuanto tiempo queres comprometerte?
         </h3>
