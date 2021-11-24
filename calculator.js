@@ -1,8 +1,7 @@
-
-import { showResults} from "./result.js";
+import { showResults } from "./result.js";
 
 function calculatorPage(contenedor) {
-  contenedor.innerHTML = `  <h1 class="title">¡Empeza a ahorrar!</h1>
+  contenedor.innerHTML = ` 
     <div class="calculator__container">
       <form class="calculator__form">
         <h2 class="calculator__title">Calcula tu ahorro</h2>
@@ -84,9 +83,9 @@ function calculateSavings() {
   const multiplier = getMultiplier();
   let sum = 0;
 
-  if(isNaN(month) || isNaN(multiply) || isNaN(multiplier)){
-    return 'Ha ocurrido un error al calcular su ahorro, asegurese de que todos los campos sean completados con valores numericos'
-  } else{
+  if (isNaN(month) || isNaN(multiply) || isNaN(multiplier)) {
+    return "Ha ocurrido un error al calcular su ahorro, asegurese de que todos los campos sean completados con valores numericos";
+  } else {
     for (let i = 1; i <= month * 30; i++) {
       if (i <= multiply) {
         sum += i * multiplier;
@@ -96,7 +95,6 @@ function calculateSavings() {
     }
     return sum;
   }
-
 }
 
 function printResults() {
