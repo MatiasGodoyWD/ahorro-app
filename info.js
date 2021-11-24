@@ -14,12 +14,8 @@ function infoPage(contenedor) {
         </p>
         <button class="btn info__btn">Quiero empezar a ahorrar</button>
       </div>
-      
-      <img
-        src="./img/chanchaorro.jpg"
-        alt="Chancho con monedas"
-        class="info__img"
-      />
+      <iframe class="info__video" width="560" height="315" src="https://www.youtube.com/embed/cBM48pasdC0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
     </div>`;
   showCalculator(contenedor);
 }

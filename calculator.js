@@ -1,5 +1,5 @@
-import { infoPage } from "./info.js";
-import { showResults } from "./result.js";
+
+import { showResults} from "./result.js";
 
 function calculatorPage(contenedor) {
   contenedor.innerHTML = `  <h1 class="title">¡Empeza a ahorrar!</h1>
@@ -10,7 +10,7 @@ function calculatorPage(contenedor) {
           ¿Por cuanto tiempo queres comprometerte?
         </h3>
         <p>
-          <input class='radio-input' type="radio" id="one-month" name="days" value="1" />
+          <input class='radio-input' type="radio" id="one-month" name="days" value="1" checked  />
           <label class='calculator__label' for="one-month">1 Mes</label>
           
         </p>
@@ -24,7 +24,7 @@ function calculatorPage(contenedor) {
           <label class='calculator__label' for="twelve-month">12 meses</label>
         </p>
         <p>
-          <input class='radio-input' type="radio" id="other" name="days" checked />
+          <input class='radio-input' type="radio" id="other" name="days" />
           <label class='calculator__label' for="other">
             Otro : </label> <input type="text" name="days" id="other-text" class="calculator__input" placeholder="meses..." />
           
@@ -33,9 +33,9 @@ function calculatorPage(contenedor) {
           ¿Queres multiplicar la cantidad a ahorrar?
         </h3>
 
-        <p><label class='calculator__label' for = 'multiply'>Días a multiplicar: </label > <input type="text" name="multiply" id="multiply" class="calculator__input"></p>
-        <p><label class='calculator__label' for = 'multiplier'>Multiplicar por:</label > <input type="text" name="multiplier" id="multiplier" class="calculator__input"></p>
-      <button class="btn calculator__btn" type= 'submit' >Calcula tu ahorro</button>
+        <p><label class='calculator__label' for = 'multiply'>Días a multiplicar: </label > <input type="text" name="multiply" id="multiply" value="0" class="calculator__input"></p>
+        <p><label class='calculator__label' for = 'multiplier'>Multiplicar por:</label > <input type="text" name="multiplier" id="multiplier" value="0"  class="calculator__input"></p>
+      <button class="btn responsive__btn" type= 'submit' >Calcula tu ahorro</button>
         </form>
       <img
         src="./img/chanchaorro.jpg"
@@ -83,19 +83,24 @@ function calculateSavings() {
   const multiply = getMultiply();
   const multiplier = getMultiplier();
   let sum = 0;
-  for (let i = 1; i <= month * 30; i++) {
-    if (i <= multiply) {
-      sum += i * multiplier;
-    } else {
-      sum += i;
+
+  if(isNaN(month) || isNaN(multiply) || isNaN(multiplier)){
+    return 'Ha ocurrido un error al calcular su ahorro, asegurese de que todos los campos sean completados con valores numericos'
+  } else{
+    for (let i = 1; i <= month * 30; i++) {
+      if (i <= multiply) {
+        sum += i * multiplier;
+      } else {
+        sum += i;
+      }
     }
+    return sum;
   }
-  return sum;
+
 }
 
 function printResults() {
   const form = document.querySelector(".calculator__form");
-
   form.addEventListener("submit", showResults);
 }
 

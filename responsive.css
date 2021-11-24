@@ -1,0 +1,63 @@
+@media (min-width: 300px) and (max-width: 1000px) {
+
+    .title{
+        font-size: 2rem;
+        padding: 0rem .5rem;
+    }
+    
+    .app-container{
+        justify-content: center;
+    }
+
+    .info__video, .info__img{
+        display: none;
+    }
+    .info__sobres__container{
+        width: 90%;
+        align-items: center;
+        text-align: center;
+    }
+    .calculator__form{
+        width: 90%;
+    }
+    .calculator__title{
+        width: 100%;
+        text-align: center;
+        font-size: 1.8rem;
+        
+    }
+    .calculator__input{
+        width: 60%;
+    }
+
+    .responsive__btn{
+        margin-top: 1rem;
+        padding: 0.1rem 1.2rem;
+        align-self: center;
+    }
+
+    .result__container{
+        height: auto;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .result__p:nth-last-of-type(1){
+        font-size: 2rem;
+    }
+
+    .result__btn__container{
+        flex-direction: column;
+        width: 80%;
+    }
+
+
+
+
+}
+
+@media (min-width: 1001px) and (max-width: 1600px){
+    .info__video, .info__img{
+        height: 60%;
+    }
+}
